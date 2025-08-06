@@ -10,23 +10,8 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 // configure of CORS
-
-const cors = require("cors");
-
-const whitelist = [
-  "https://wordtopdf-frontend-dcpaxdcac-shivam-roys-projects.vercel.app",
-  "https://wordtopdf-frontend-23m3bak9b-shivam-roys-projects.vercel.app",
-  "https://word-to-pdf-converter-eight.vercel.app", // Add any future frontend URL here
-];
-
 const corsOptions = {
-    origin: function (origin, callback) {
-        if (whitelist.indexOf(origin) !== -1 || !origin) {
-            callback(null, true);
-        } else {
-            callback(new Error("Not allowed by CORS"));
-        }
-    },
+    origin: process.env.FRONTEND_URL || "http://localhost:5173",
     methods: ["GET", "POST", "OPTIONS", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
 };
