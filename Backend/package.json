@@ -11,6 +11,8 @@
   "description": "doc to pdf converter",
   "dependencies": {
     "cors": "^2.8.5",
+    "docx-pdf": "^0.0.1",
+    "dotenv": "^17.2.1",
     "express": "^5.1.0",
     "libreoffice-convert": "^1.6.1",
     "multer": "^2.0.2",

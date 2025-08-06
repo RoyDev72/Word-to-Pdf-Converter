@@ -3,11 +3,19 @@ const multer = require("multer");
 const cors = require("cors");
 const docxToPDF = require("docx-pdf");
 const path = require("path");
+const dotenv = require("dotenv");
+dotenv.config();
 
 const app = express();
 const port = process.env.PORT || 3000;
 
-app.use(cors());
+// configure of CORS
+const corsOptions = {
+    origin: process.env.FRONTEND_URL || "http://localhost:5173",
+    methods: ["GET", "POST", "OPTIONS", "DELETE"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+};
+app.use(cors(corsOptions));
 
 // settting up the file storage
 const storage = multer.diskStorage({

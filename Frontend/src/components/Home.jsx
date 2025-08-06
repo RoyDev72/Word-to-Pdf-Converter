@@ -3,6 +3,7 @@ import { FaFileWord } from "react-icons/fa6";
 import { FaSpinner } from "react-icons/fa";
 import axios from "axios";
 
+
 function Home() {
   const [selectedFile, setSelectedFile] = useState(null);
   const [convert, setConvert] = useState("");
@@ -32,7 +33,7 @@ function Home() {
     formData.append("file", selectedFile);
     try {
       const response = await axios.post(
-        "http://localhost:3000/convertfile",
+        `${import.meta.env.VITE_BACKEND_URL}/convertfile`,
         formData,
         {
           responseType: "blob",
