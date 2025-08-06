@@ -11,7 +11,7 @@ const port = process.env.PORT || 3000;
 
 // configure of CORS
 const corsOptions = {
-    origin: process.env.FRONTEND_URL || "http://localhost:5173",
+    origin: process.env.FRONTEND_URL || "https://word-to-pdf-orpin.vercel.app",
     methods: ["GET", "POST", "OPTIONS", "DELETE"],
     allowedHeaders: ["Content-Type", "Authorization"],
 };
