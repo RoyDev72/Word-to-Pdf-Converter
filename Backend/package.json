@@ -1,21 +1,41 @@
 {
-  "name": "shivam",
+  "name": "word-to-pdf-converter-backend",
   "version": "1.0.0",
+  "description": "Backend API for converting Word documents to PDF format",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Shivam Roy",
-  "license": "ISC",
-  "description": "doc to pdf converter",
+  "keywords": ["word", "pdf", "converter", "docx", "document", "api"],
+  "author": {
+    "name": "Shivam Roy",
+    "email": "your.email@example.com",
+    "url": "https://github.com/RoyDev72"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RoyDev72/Word-to-Pdf-Converter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/RoyDev72/Word-to-Pdf-Converter/issues"
+  },
+  "homepage": "https://github.com/RoyDev72/Word-to-Pdf-Converter#readme",
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
   "dependencies": {
     "cors": "^2.8.5",
     "docx-pdf": "^0.0.1",
     "dotenv": "^17.2.1",
     "express": "^5.1.0",
     "libreoffice-convert": "^1.6.1",
-    "multer": "^2.0.2",
+    "multer": "^2.0.2"
+  },
+  "devDependencies": {
     "nodemon": "^3.1.10"
   }
 }
